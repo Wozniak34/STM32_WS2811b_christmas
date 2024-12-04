@@ -1,0 +1,12 @@
+stm32wbxx_ll_usart.h:660:26:LL_USART_IsEnabled	2
+stm32wbxx_ll_usart.h:1226:22:LL_USART_SetPrescaler	1
+stm32wbxx_ll_usart.h:1306:22:LL_USART_SetStopBitsLength	1
+stm32wbxx_ll_usart.h:1731:22:LL_USART_SetHWFlowCtrl	1
+stm32wbxx_ll_usart.h:1882:22:LL_USART_SetBaudRate	4
+stm32wbxx_ll_bus.h:1354:22:LL_APB2_GRP1_ForceReset	1
+stm32wbxx_ll_bus.h:1380:22:LL_APB2_GRP1_ReleaseReset	1
+stm32wbxx_ll_usart.c:137:13:LL_USART_DeInit	2
+stm32wbxx_ll_usart.c:173:13:LL_USART_Init	5
+stm32wbxx_ll_usart.c:268:6:LL_USART_StructInit	1
+stm32wbxx_ll_usart.c:293:13:LL_USART_ClockInit	2
+stm32wbxx_ll_usart.c:340:6:LL_USART_ClockStructInit	1
