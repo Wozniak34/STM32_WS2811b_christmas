@@ -323,53 +323,57 @@ void WS2811_flash_color(uint16_t first_led, uint16_t last_led, uint32_t time)
 void WS2811_snake(void)
 {
 	static uint8_t direction;
-	static uint16_t counter1;
-	static uint16_t counter2;
+	static int16_t counter1;
+	//static int16_t counter2;
+	//if(counter1 > WS2811_LEDS) counter1 = WS2811_LEDS;
+	//if(counter2 > WS2811_LEDS) counter2 = WS2811_LEDS;
 
-	if(direction == 1)
+	if(direction == 0)
 	{
 		counter1++;
-		counter2--;
 
-		ws2811_set_diode_HSV(counter1 - 1, 260, 0xff, 0x3);
+
+		ws2811_set_diode_HSV(counter1 , 300, 0xff, 0xff);
 		for(uint8_t i = 0; i < 32; i++)
 		{
-			ws2811_set_diode_HSV(counter1 + i, 240, 0xff, i * 8);
+			ws2811_set_diode_HSV(counter1 - i, 300, 0xff, 0xff - i * 8);
 		}
 
-		ws2811_set_diode_HSV(counter2 + 1, 20, 0xff, 0x3);
+		ws2811_set_diode_HSV(WS2811_LEDS - counter1, 20, 0xff, 0xff);
+		//ws2811_set_diode_HSV(WS2811_LEDS - counter1 + 1, 20, 0xff, 0xf);
 		for(uint8_t i = 0; i < 32; i++)
 		{
-			ws2811_set_diode_HSV(counter2 - i, 0, 0xff, i * 8);
+			ws2811_set_diode_HSV(WS2811_LEDS - counter1 + i, 20, 0xff, 0xff - i * 8);
 		}
 
-		if(counter1 > WS2811_LEDS)
+		if(counter1  > WS2811_LEDS + 32)
 		{
-			direction = 0;
+			direction = 1;
+			//counter1 =0;
 		}
 	}
 	else
 	{
+
 		counter1--;
-		counter2++;
-
-		ws2811_set_diode_HSV(counter2 - 1, 20, 0xff, 0x3);
+		ws2811_set_diode_HSV(WS2811_LEDS - counter1, 20, 0xff, 0xff);
+	//	ws2811_set_diode_HSV(WS2811_LEDS - counter1 - 1, 20, 0xff, 0xf);
 		for(uint8_t i = 0; i < 32; i++)
 		{
-			ws2811_set_diode_HSV(counter2 + i, 0, 0xff, i * 8);
+			ws2811_set_diode_HSV(WS2811_LEDS - counter1 - i, 20, 0xff, 0xff - i * 8);
 		}
 
-		ws2811_set_diode_HSV(counter1 + 1, 260, 0xff, 0x3);
+		ws2811_set_diode_HSV(counter1, 300, 0xff, 0xff);
 		for(uint8_t i = 0; i < 32; i++)
 		{
-			ws2811_set_diode_HSV(counter1 - i, 240, 0xff, i * 8);
+			ws2811_set_diode_HSV(counter1 + i, 300, 0xff, 0xff - i * 8);
 		}
 
-		if(counter1 > WS2811_LEDS)
+		if(counter1 + 32 < 0)
 		{
-			direction = 1;
+			direction = 0;
 		}
-		}
+	}
 	LL_mDelay(50);
 }
 

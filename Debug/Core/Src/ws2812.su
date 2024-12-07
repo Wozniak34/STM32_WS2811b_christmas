@@ -21,5 +21,5 @@
 ../Core/Src/ws2812.c:298:6:WS2811_flash	40	static
 ../Core/Src/ws2812.c:306:6:WS2811_flash_color	24	static
 ../Core/Src/ws2812.c:323:6:WS2811_snake	16	static
-../Core/Src/ws2812.c:376:6:WS2811_rainbow_flow	16	static
-../Core/Src/ws2812.c:399:6:color_change	16	static
+../Core/Src/ws2812.c:380:6:WS2811_rainbow_flow	16	static
+../Core/Src/ws2812.c:403:6:color_change	16	static

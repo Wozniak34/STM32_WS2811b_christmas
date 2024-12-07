@@ -50,8 +50,6 @@ uint32_t new_msTick, time;
 uint16_t step = 1;
 
 
-uint16_t test;
-
 uint32_t GetTick(void);
 void Tick_add(void);
 /* USER CODE END PV */
@@ -113,7 +111,7 @@ int main(void)
   LL_SYSTICK_EnableIT();
 
 
-  time = 50000;
+  time = 30000;
 
 
   /* USER CODE END 2 */

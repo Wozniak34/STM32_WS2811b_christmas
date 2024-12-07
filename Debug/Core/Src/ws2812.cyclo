@@ -21,5 +21,5 @@ ws2812.c:290:6:WS2811_set_color_HSV	2
 ws2812.c:298:6:WS2811_flash	1
 ws2812.c:306:6:WS2811_flash_color	2
 ws2812.c:323:6:WS2811_snake	8
-ws2812.c:376:6:WS2811_rainbow_flow	3
-ws2812.c:399:6:color_change	4
+ws2812.c:380:6:WS2811_rainbow_flow	3
+ws2812.c:403:6:color_change	4

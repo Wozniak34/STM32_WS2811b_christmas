@@ -25,10 +25,10 @@ stm32wbxx_ll_rcc.h:3385:22:LL_RCC_PLL_EnableDomain_SYS	1
 stm32wbxx_ll_system.h:1976:22:LL_FLASH_SetLatency	1
 stm32wbxx_ll_system.h:1990:26:LL_FLASH_GetLatency	1
 stm32wbxx_ll_cortex.h:273:22:LL_SYSTICK_EnableIT	1
-main.c:75:5:main	11
-main.c:181:6:SystemClock_Config	7
-main.c:245:6:PeriphCommonClock_Config	1
-main.c:258:10:GetTick	1
-main.c:264:6:Tick_add	1
-main.c:270:6:Refresch_SysTick	2
-main.c:286:6:Error_Handler	1
+main.c:73:5:main	11
+main.c:179:6:SystemClock_Config	7
+main.c:243:6:PeriphCommonClock_Config	1
+main.c:256:10:GetTick	1
+main.c:262:6:Tick_add	1
+main.c:268:6:Refresch_SysTick	2
+main.c:284:6:Error_Handler	1
